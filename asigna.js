@@ -1,6 +1,7 @@
 var tools = require('./funcionesAsignaCliente')
 var clientes = require('./clientesPrueba')
 var esc = require('./escPrueba')
+var config = require('./config')
 
 
 // filtra por genero
@@ -38,7 +39,7 @@ if (escH.length === 0 || escM.length === 0) {
     let index
     console.log("Por genero")
     clientes.forEach(element => {
-        escAsignado = tools.porGenero(element, esc)
+        escAsignado = tools.porGenero(config.umbral, element, esc)
         index = esc.findIndex(x => x.id === escAsignado);
         esc[index].puntos += element.puntos
         esc[index].clientes.push(element)

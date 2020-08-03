@@ -1,44 +1,12 @@
 module.exports = {
     porPuntos: (cliente, esc) => {
         // la función regresa el "id" del esc a modificar
-        let escAsignado
-        escAsignado = asignaxPuntos(clientes, esc)
+        let escAsignado = asignaxPuntos(clientes, esc)
         return escAsignado
     },
-    porGenero: (cliente, esc) => {
+    porGenero: (umbral, cliente, esc) => {
         // la función regresa el "id" del esc a modificar
-        const umbral = 5
-        let bajoUmbral = []
-        let escAsignado
-        esc = ordenaxPuntos(esc)
-            //obtiene los elementos que son
-            //menores al umbral en puntos
-            //por lo tanto son a los que se les puede asignar
-        bajoUmbral = escBajoUmbral(esc, umbral)
-            // Clasifico a los ESC por genero
-        let escM = bajoUmbral.filter(x => x.genero === 'M')
-        let escH = bajoUmbral.filter(x => x.genero === 'H')
-        console.log('Mujeres', escM)
-        console.log('Hombres', escH)
-        if (cliente.genero === 'M') {
-            if (escM.length)
-            // Si existe al menor uno se asigna a las mujeres
-                escAsignado = asignaxPuntos(cliente, escM)
-            else
-            // Si no existe ninguno se asigna a cualquiera
-            // que este debajo del umbral
-                escAsignado = asignaxPuntos(cliente, bajoUmbral)
-
-        } else {
-            if (escH.length)
-            // Si existe al menor uno se asigna a las mujeres
-                escAsignado = asignaxPuntos(cliente, escH)
-            else
-            // Si no existe ninguno se asigna a cualquiera
-            // que este debajo del umbral
-                escAsignado = asignaxPuntos(cliente, bajoUmbral)
-
-        }
+        let escAsignado = asignaxGenero(umbral, cliente, esc)
         return escAsignado
     }
 };
@@ -121,4 +89,39 @@ let asignaxPuntos = (cliente, esc) => {
         return esc[indice].id
     } else
         return esc[0].id
+}
+
+let asignaxGenero = (umbral, cliente, esc) => {
+    let bajoUmbral = []
+    let escAsignado
+    esc = ordenaxPuntos(esc)
+        //obtiene los elementos que son
+        //menores al umbral en puntos
+        //por lo tanto son a los que se les puede asignar
+    bajoUmbral = escBajoUmbral(esc, umbral)
+        // Clasifico a los ESC por genero
+    let escM = bajoUmbral.filter(x => x.genero === 'M')
+    let escH = bajoUmbral.filter(x => x.genero === 'H')
+    console.log('Mujeres', escM)
+    console.log('Hombres', escH)
+    if (cliente.genero === 'M') {
+        if (escM.length)
+        // Si existe al menor uno se asigna a las mujeres
+            escAsignado = asignaxPuntos(cliente, escM)
+        else
+        // Si no existe ninguno se asigna a cualquiera
+        // que este debajo del umbral
+            escAsignado = asignaxPuntos(cliente, bajoUmbral)
+
+    } else {
+        if (escH.length)
+        // Si existe al menor uno se asigna a las mujeres
+            escAsignado = asignaxPuntos(cliente, escH)
+        else
+        // Si no existe ninguno se asigna a cualquiera
+        // que este debajo del umbral
+            escAsignado = asignaxPuntos(cliente, bajoUmbral)
+
+    }
+    return escAsignado
 }
