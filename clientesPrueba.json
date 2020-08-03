@@ -1,0 +1,17 @@
+[
+    { "id": 1, "genero": "H", "puntos": 7 },
+    { "id": 2, "genero": "M", "puntos": 5 },
+    { "id": 3, "genero": "H", "puntos": 6 },
+    { "id": 4, "genero": "M", "puntos": 1 },
+    { "id": 5, "genero": "M", "puntos": 4 },
+    { "id": 6, "genero": "H", "puntos": 3 },
+    { "id": 7, "genero": "M", "puntos": 2 },
+    { "id": 8, "genero": "H", "puntos": 10 },
+    { "id": 9, "genero": "H", "puntos": 9 },
+    { "id": 10, "genero": "H", "puntos": 8 },
+    { "id": 11, "genero": "H", "puntos": 5 },
+    { "id": 12, "genero": "H", "puntos": 4 },
+    { "id": 13, "genero": "M", "puntos": 2 },
+    { "id": 14, "genero": "M", "puntos": 1 },
+    { "id": 15, "genero": "H", "puntos": 4 }
+]

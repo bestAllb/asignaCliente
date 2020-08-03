@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nombre": "hugo", "genero": "H", "puntos": 0, "clientes": [] },
+    { "id": 2, "nombre": "daisy", "genero": "M", "puntos": 0, "clientes": [] },
+    { "id": 3, "nombre": "paco", "genero": "H", "puntos": 0, "clientes": [] },
+    { "id": 4, "nombre": "luis", "genero": "H", "puntos": 0, "clientes": [] },
+    { "id": 5, "nombre": "mini", "genero": "M", "puntos": 0, "clientes": [] }
+]
