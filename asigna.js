@@ -39,7 +39,7 @@ if (escH.length === 0 || escM.length === 0) {
     let index
     console.log("Por genero")
     clientes.forEach(element => {
-        escAsignado = tools.porGenero(config.umbral, element, esc)
+        escAsignado = tools.porGenero(config.umbral_genero, element, esc)
         index = esc.findIndex(x => x.id === escAsignado);
         esc[index].puntos += element.puntos
         esc[index].clientes.push(element)
