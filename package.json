@@ -1,0 +1,22 @@
+{
+  "name": "asignacliente",
+  "version": "1.0.0",
+  "description": "asignaCliente",
+  "main": "asigna.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bestAllb/asignaCliente.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bestAllb/asignaCliente/issues"
+  },
+  "homepage": "https://github.com/bestAllb/asignaCliente#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

@@ -1,0 +1,109 @@
+[{
+        "esc": 4,
+        "deudas": 15,
+        "clientes": 5,
+        "hombre": 4,
+        "mujer": 1,
+        "meses": 74.0000,
+        "monto": 270527.00
+    },
+    {
+        "esc": 5,
+        "deudas": 4,
+        "clientes": 2,
+        "hombre": 2,
+        "mujer": 0,
+        "meses": 24.0000,
+        "monto": 177690.00
+    },
+    {
+        "esc": 12,
+        "deudas": 16,
+        "clientes": 6,
+        "hombre": 5,
+        "mujer": 1,
+        "meses": 143.0000,
+        "monto": 589750.00
+    },
+    {
+        "esc": 14,
+        "deudas": 47,
+        "clientes": 22,
+        "hombre": 11,
+        "mujer": 11,
+        "meses": 482.0000,
+        "monto": 2202620.00
+    },
+    {
+        "esc": 15,
+        "deudas": 7,
+        "clientes": 3,
+        "hombre": 2,
+        "mujer": 1,
+        "meses": 60.0000,
+        "monto": 266228.00
+    },
+    {
+        "esc": 17,
+        "deudas": 10,
+        "clientes": 5,
+        "hombre": 2,
+        "mujer": 3,
+        "meses": 110.0000,
+        "monto": 423679.00
+    },
+    {
+        "esc": 18,
+        "deudas": 73,
+        "clientes": 25,
+        "hombre": 25,
+        "mujer": 0,
+        "meses": 513.0000,
+        "monto": 3276867.00
+    },
+    {
+        "esc": 19,
+        "deudas": 10,
+        "clientes": 5,
+        "hombre": 4,
+        "mujer": 1,
+        "meses": 92.0000,
+        "monto": 340283.00
+    },
+    {
+        "esc": 22,
+        "deudas": 9,
+        "clientes": 6,
+        "hombre": 2,
+        "mujer": 4,
+        "meses": 67.0000,
+        "monto": 212163.00
+    },
+    {
+        "esc": 32,
+        "deudas": 12,
+        "clientes": 3,
+        "hombre": 1,
+        "mujer": 2,
+        "meses": 89.0000,
+        "monto": 332683.84
+    },
+    {
+        "esc": 35,
+        "deudas": 16,
+        "clientes": 7,
+        "hombre": 7,
+        "mujer": 0,
+        "meses": 116.0000,
+        "monto": 678332.06
+    },
+    {
+        "esc": 36,
+        "deudas": 13,
+        "clientes": 6,
+        "hombre": 3,
+        "mujer": 3,
+        "meses": 125.0000,
+        "monto": 491587.00
+    }
+]
