@@ -1,3 +1,4 @@
+create or replace view v_get_points_esc as
 select
     b.ESC esc,
     sum(b.deudas) deudas,
@@ -19,8 +20,10 @@ from
     inner join accounts acc on vnc.id = acc.user
     inner join contracts con on vnc.id = con.user
     inner join users usr on vnc.id = usr.id
-    where MONTH(vnc.firstPaymentDate) = MONTH(current_date())
+    inner join consultants consul on vnc.consultant_id = consul.id
+    where MONTH(vnc.firstPaymentDate) = MONTH('2020-07-31')
     and YEAR(vnc.firstPaymentDate) = YEAR(current_date())
-    #and vnc.firstPaymentComplete = 1
+    and consul.enabled = 1
+    and consul.role = 'service'
     group by vnc.id) as b
-group by esc;
+group by esc

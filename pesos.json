@@ -1,0 +1,7 @@
+{
+    "months": 100,
+    "number_clients": 80,
+    "number_contracts": 60,
+    "amount_debt": 20,
+    "gender_threshold": 200
+}

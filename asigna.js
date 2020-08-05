@@ -5,6 +5,8 @@ let clientes = require('./clientesPrueba')
 let esc = require('./escPrueba')
 let config = require('./config')
 let datos = require('./datos')
+let pesos = require('./pesos')
+let escActivos = require('./escActivos')
     /*
     var connection = mysql.createConnection({
         host: 'dbm-cluster.cluster-c425ewuorrit.us-west-1.rds.amazonaws.com',
@@ -40,6 +42,25 @@ let deudas = 0,
         console.log('otros', otros);
     })
     */
+let pesoMeses = pesos.months,
+    pesoClientes = pesos.number_clients,
+    pesoDeudas = pesos.number_contracts,
+    pesoMonto = pesos.amount_debt
+
+let pesoTotal = (pesoMeses + pesoClientes + pesoDeudas + pesoMonto) / 100
+console.log(pesoMeses, pesoClientes, pesoDeudas, pesoMonto);
+
+
+
+console.log('---------------ESC activos------------------------')
+console.log(escActivos);
+let escEnabled = []
+escActivos.forEach(element => {
+    escEnabled.push({ idEsc: element.idConsultant });
+});
+console.log(escEnabled);
+
+
 console.log('---------------ORIGINAL------------------------')
 console.log(datos);
 
@@ -61,23 +82,24 @@ datos.forEach(element => {
 console.log('---------------PORCENTAJES------------------------')
 console.log(datos);
 datos.forEach(element => {
-    element.meses *= 100 / 2.6
-    element.clientes *= 80 / 2.6
-    element.deudas *= 60 / 2.6
-    element.monto *= 20 / 2.6
+    element.meses *= pesoMeses / pesoTotal
+    element.clientes *= pesoClientes / pesoTotal
+    element.deudas *= pesoDeudas / pesoTotal
+    element.monto *= pesoMonto / pesoTotal
 })
 console.log('----------------PESOS-----------------------')
 console.log(datos);
 
-let pesos = []
+let puntos = []
 datos.forEach(element => {
     pts = element.meses + element.clientes + element.deudas + element.monto
-    pesos.push({ esc: element.esc, puntos: pts })
+    puntos.push({ esc: element.esc, pts: pts })
 });
 console.log('----------------PESOS-----------------------')
-console.log(pesos);
+console.log(puntos);
 
-/*
+
+
 
 // filtra por genero
 let escM = esc.filter(x => x.genero === 'M')
@@ -128,4 +150,3 @@ if (escH.length === 0 || escM.length === 0) {
 
     });
 }
-*/
